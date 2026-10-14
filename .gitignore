@@ -1,0 +1,14 @@
+# 微信开发者工具本地私有配置（含机器专属设置，勿提交）
+project.private.config.json
+
+# 依赖与构建产物
+node_modules/
+npm-debug.log*
+yarn-error.log
+*.log
+
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

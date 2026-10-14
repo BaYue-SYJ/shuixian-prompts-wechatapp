@@ -1,0 +1,82 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/category/category",
+    "pages/favorites/favorites",
+    "pages/mine/mine",
+    "pages/list/list",
+    "pages/detail/detail"
+  ],
+  "subPackages": [
+    {
+      "root": "packages/i0",
+      "name": "i0",
+      "pages": [
+        "holder/holder"
+      ]
+    },
+    {
+      "root": "packages/b0",
+      "name": "b0",
+      "pages": [
+        "holder/holder"
+      ]
+    },
+    {
+      "root": "packages/b1",
+      "name": "b1",
+      "pages": [
+        "holder/holder"
+      ]
+    },
+    {
+      "root": "packages/b2",
+      "name": "b2",
+      "pages": [
+        "holder/holder"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "水仙的AI提示词",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F7F7F7"
+  },
+  "tabBar": {
+    "color": "#9aa4ab",
+    "selectedColor": "#2C8CAB",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/favorites/favorites",
+        "text": "收藏"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "preloadRule": {
+    "pages/index/index": {
+      "network": "all",
+      "packages": [
+        "b0"
+      ]
+    }
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "shuixian-prompts-miniprogram",
+  "version": "1.0.0",
+  "description": "水仙的AI提示词 · 微信小程序（纯文字版，提示词内置、不联网）",
+  "scripts": {
+    "test": "node scripts/mp_integration_test.js",
+    "build": "python scripts/build_miniprogram_data.py"
+  },
+  "license": "MIT",
+  "keywords": [
+    "wechat-miniprogram",
+    "ai-prompts",
+    "offline"
+  ]
+}

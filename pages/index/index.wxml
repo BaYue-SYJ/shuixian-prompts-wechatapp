@@ -1,0 +1,56 @@
+<view class="page">
+
+  <!-- 品牌头 -->
+  <view class="hero">
+    <view class="hero__row">
+      <view>
+        <view class="hero__title">水仙的AI提示词</view>
+        <view class="hero__sub">{{total}} 条精选 · 图文版</view>
+      </view>
+      <view class="hero__dice" bindtap="goRandom" hover-class="btn--hover">随机一条</view>
+    </view>
+    <view class="searchbar hero__search" bindtap="goSearch" hover-class="btn--hover">
+      <text class="searchbar__ph">搜索标题 / 关键词 / 分类</text>
+    </view>
+  </view>
+
+  <!-- 分类快筛 -->
+  <scroll-view class="chips chips--wrap" scroll-x enable-flex>
+    <view
+      wx:for="{{chips}}"
+      wx:key="name"
+      class="chip {{item.idx === catIdx ? 'chip--on' : ''}}"
+      data-idx="{{item.idx}}"
+      bindtap="onChip"
+    >{{item.name}}</view>
+  </scroll-view>
+
+  <!-- 列表 -->
+  <view class="list">
+    <view class="list__count">共 {{hitTotal}} 条</view>
+    <view
+      class="card"
+      wx:for="{{list}}"
+      wx:key="id"
+      data-id="{{item.id}}"
+      bindtap="goDetail"
+      hover-class="btn--hover"
+    >
+      <image wx:if="{{item.image}}" class="card__cover" src="{{item.image}}" mode="aspectFill" lazy-load="true"></image>
+      <view class="card__title">{{item.title}}</view>
+      <view class="card__excerpt">{{item.excerpt}}</view>
+      <view class="card__foot">
+        <text class="tag">{{item.cat}}</text>
+        <text class="card__go">查看 ›</text>
+      </view>
+    </view>
+
+    <view class="loadmore" wx:if="{{hasMore}}">上拉加载更多</view>
+    <view class="loadmore" wx:elif="{{list.length > 0}}">— 已经到底了 —</view>
+    <view class="state" wx:if="{{list.length === 0}}">
+      <text class="state__title">这个分类还没有内容</text>
+      换个分类看看吧
+    </view>
+  </view>
+
+</view>

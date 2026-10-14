@@ -1,0 +1,59 @@
+.l-search {
+  display: flex;
+  align-items: center;
+  gap: 18rpx;
+  padding: 22rpx 24rpx;
+  background: #ffffff;
+}
+.l-search .searchbar {
+  flex: 1;
+  background: #F7F7F7;
+  border-color: #eef2f4;
+}
+.l-search__btn {
+  font-size: 27rpx;
+  color: #2C8CAB;
+  padding: 0 6rpx;
+}
+
+.l-catbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 32rpx 4rpx;
+}
+.l-catbar__n {
+  font-size: 23rpx;
+  color: #a3adb3;
+}
+
+.l-history {
+  padding: 26rpx 32rpx 4rpx;
+}
+.l-history__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 24rpx;
+  color: #8b969c;
+  margin-bottom: 20rpx;
+}
+.l-history__clear {
+  color: #b6c0c6;
+}
+.l-history__body .chip {
+  margin-bottom: 16rpx;
+}
+
+.list {
+  padding: 16rpx 24rpx 40rpx;
+}
+.list__count {
+  padding: 8rpx 8rpx 16rpx;
+  font-size: 23rpx;
+  color: #a3adb3;
+}
+.card__go {
+  font-size: 24rpx;
+  color: #2C8CAB;
+}

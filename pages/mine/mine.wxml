@@ -1,0 +1,48 @@
+<view class="page">
+
+  <view class="m-head">
+    <view class="m-head__logo">水仙</view>
+    <view class="m-head__title">水仙的AI提示词</view>
+    <view class="m-head__sub">收集 · 整理 · 分享好用的 AI 绘画提示词</view>
+  </view>
+
+  <view class="m-stat">
+    <view class="m-stat__cell">
+      <view class="m-stat__n">{{total}}</view>
+      <view class="m-stat__l">提示词</view>
+    </view>
+    <view class="m-stat__cell">
+      <view class="m-stat__n">{{catCount}}</view>
+      <view class="m-stat__l">分类</view>
+    </view>
+    <view class="m-stat__cell" bindtap="goFav" hover-class="btn--hover">
+      <view class="m-stat__n">{{favCount}}</view>
+      <view class="m-stat__l">我的收藏</view>
+    </view>
+  </view>
+
+  <view class="m-group">
+    <view class="m-row" bindtap="goRandom" hover-class="btn--hover">
+      <text class="m-row__k">随机来一条</text>
+      <text class="m-row__v">›</text>
+    </view>
+    <view class="m-row" bindtap="goFav" hover-class="btn--hover">
+      <text class="m-row__k">我的收藏</text>
+      <text class="m-row__v">{{favCount}} 条 ›</text>
+    </view>
+    <view class="m-row" bindtap="clearCache" hover-class="btn--hover">
+      <text class="m-row__k">清除本地数据</text>
+      <text class="m-row__v">›</text>
+    </view>
+  </view>
+
+  <view class="m-note">
+    <view class="m-note__t">关于当前版本</view>
+    <view class="m-note__p">当前为<text class="m-note__hl">纯文字版</text>：全部 {{total}} 条提示词已内置在小程序内，无需联网即可浏览、搜索与复制。</view>
+    <view class="m-note__p">配图功能待图片域名完成 ICP 备案后开放，届时会在详情页补上示例图。</view>
+    <view class="m-note__p m-note__p--dim">搜索范围：标题、摘要与分类。</view>
+  </view>
+
+  <view class="m-foot">数据更新于 {{buildAt}}</view>
+
+</view>

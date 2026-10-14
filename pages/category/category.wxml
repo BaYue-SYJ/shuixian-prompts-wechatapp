@@ -1,0 +1,25 @@
+<view class="page">
+
+  <view class="c-head">
+    <view class="c-head__title">全部分类</view>
+    <view class="c-head__sub">{{cats.length}} 个分类 · {{total}} 条提示词</view>
+    <view class="searchbar c-head__search" bindtap="goSearch" hover-class="btn--hover">
+      <text class="searchbar__ph">搜索标题 / 关键词 / 分类</text>
+    </view>
+  </view>
+
+  <view class="c-grid">
+    <view
+      class="c-item"
+      wx:for="{{cats}}"
+      wx:key="idx"
+      data-idx="{{item.idx}}"
+      bindtap="goCat"
+      hover-class="btn--hover"
+    >
+      <view class="c-item__name">{{item.name}}</view>
+      <view class="c-item__count">{{item.count}}</view>
+    </view>
+  </view>
+
+</view>

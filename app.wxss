@@ -1,0 +1,168 @@
+/* 水仙的AI提示词 · 全局样式
+   品牌色：#2C8CAB 强调 / #E3F4F8 浅蓝 / #F7F7F7 浅灰 / #111111 文字 */
+page {
+  background: #F7F7F7;
+  color: #111111;
+  font-size: 28rpx;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+view, text, scroll-view, input, textarea {
+  box-sizing: border-box;
+}
+
+.page {
+  min-height: 100vh;
+  padding-bottom: 40rpx;
+}
+
+/* ---------- 搜索框 ---------- */
+.searchbar {
+  display: flex;
+  align-items: center;
+  height: 72rpx;
+  padding: 0 24rpx;
+  background: #ffffff;
+  border-radius: 36rpx;
+  border: 1rpx solid #e6ebee;
+}
+.searchbar__icon {
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 14rpx;
+  opacity: .45;
+}
+.searchbar__input {
+  flex: 1;
+  height: 72rpx;
+  font-size: 27rpx;
+  color: #111111;
+}
+.searchbar__ph {
+  color: #a8b2b8;
+  font-size: 27rpx;
+}
+.searchbar__clear {
+  padding: 0 6rpx;
+  color: #b6c0c6;
+  font-size: 30rpx;
+}
+
+/* ---------- 分类胶囊 ---------- */
+.chips {
+  white-space: nowrap;
+  width: 100%;
+}
+.chip {
+  display: inline-block;
+  padding: 12rpx 26rpx;
+  margin-right: 16rpx;
+  background: #ffffff;
+  border: 1rpx solid #e6ebee;
+  border-radius: 32rpx;
+  font-size: 25rpx;
+  color: #5b676e;
+  line-height: 1.2;
+}
+.chip--on {
+  background: #2C8CAB;
+  border-color: #2C8CAB;
+  color: #ffffff;
+}
+
+/* ---------- 卡片 ---------- */
+.card {
+  background: #ffffff;
+  border-radius: 20rpx;
+  padding: 28rpx 28rpx 24rpx;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+}
+.card__title {
+  font-size: 30rpx;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #111111;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.card__excerpt {
+  margin-top: 12rpx;
+  font-size: 25rpx;
+  line-height: 1.55;
+  color: #7b868c;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.card__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+
+/* ---------- 分类标签 ---------- */
+.tag {
+  display: inline-block;
+  padding: 6rpx 16rpx;
+  background: #E3F4F8;
+  color: #2C8CAB;
+  border-radius: 8rpx;
+  font-size: 22rpx;
+  line-height: 1.3;
+}
+.tag--plain {
+  background: #f2f5f6;
+  color: #94a0a6;
+}
+
+/* ---------- 状态提示 ---------- */
+.state {
+  padding: 100rpx 40rpx;
+  text-align: center;
+  color: #a3adb3;
+  font-size: 26rpx;
+  line-height: 1.7;
+}
+.state__title {
+  display: block;
+  font-size: 30rpx;
+  color: #6d787e;
+  margin-bottom: 12rpx;
+}
+.loadmore {
+  padding: 36rpx 0 20rpx;
+  text-align: center;
+  color: #b0b9be;
+  font-size: 24rpx;
+}
+
+/* ---------- 通用按钮 ---------- */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88rpx;
+  border-radius: 44rpx;
+  font-size: 29rpx;
+  font-weight: 500;
+}
+.btn--primary {
+  background: #2C8CAB;
+  color: #ffffff;
+}
+.btn--ghost {
+  background: #ffffff;
+  color: #2C8CAB;
+  border: 1rpx solid #cfe6ee;
+}
+.btn--hover {
+  opacity: .82;
+}

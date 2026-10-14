@@ -1,0 +1,74 @@
+<view class="page">
+
+  <view class="l-search">
+    <view class="searchbar">
+      <input
+        class="searchbar__input"
+        value="{{keyword}}"
+        focus="{{focus}}"
+        confirm-type="search"
+        placeholder="{{catName ? '在「' + catName + '」中搜索' : '搜索标题 / 关键词 / 分类'}}"
+        placeholder-class="searchbar__ph"
+        bindinput="onInput"
+        bindconfirm="onConfirm"
+      />
+      <text wx:if="{{keyword}}" class="searchbar__clear" bindtap="onClear">✕</text>
+    </view>
+    <text class="l-search__btn" bindtap="onConfirm">搜索</text>
+  </view>
+
+  <view wx:if="{{catName}}" class="l-catbar">
+    <text class="tag">{{catName}}</text>
+    <text class="l-catbar__n">{{hitTotal}} 条</text>
+  </view>
+
+  <!-- 搜索历史（未搜索且非分类页时显示） -->
+  <view wx:if="{{!searched && history.length > 0}}" class="l-history">
+    <view class="l-history__head">
+      <text>搜索历史</text>
+      <text class="l-history__clear" bindtap="clearHistory">清空</text>
+    </view>
+    <view class="l-history__body">
+      <text
+        wx:for="{{history}}"
+        wx:key="*this"
+        class="chip"
+        data-kw="{{item}}"
+        bindtap="onTapHistory"
+      >{{item}}</text>
+    </view>
+  </view>
+
+  <view class="list">
+    <view wx:if="{{searched && !catName}}" class="list__count">找到 {{hitTotal}} 条</view>
+
+    <view
+      class="card"
+      wx:for="{{list}}"
+      wx:key="id"
+      data-id="{{item.id}}"
+      bindtap="goDetail"
+      hover-class="btn--hover"
+    >
+      <view class="card__title">{{item.title}}</view>
+      <view class="card__excerpt">{{item.excerpt}}</view>
+      <view class="card__foot">
+        <text class="tag">{{item.cat}}</text>
+        <text class="card__go">查看 ›</text>
+      </view>
+    </view>
+
+    <view class="loadmore" wx:if="{{hasMore && list.length > 0}}">上拉加载更多</view>
+    <view class="loadmore" wx:elif="{{list.length > 0}}">— 已经到底了 —</view>
+
+    <view class="state" wx:if="{{searched && list.length === 0}}">
+      <text class="state__title">没有匹配的提示词</text>
+      换个关键词试试，搜索会匹配标题、摘要和分类
+    </view>
+    <view class="state" wx:elif="{{!searched && history.length === 0}}">
+      <text class="state__title">搜点什么吧</text>
+      支持标题、摘要与分类关键词
+    </view>
+  </view>
+
+</view>

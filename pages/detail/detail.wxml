@@ -1,0 +1,47 @@
+<view class="page detail">
+
+  <block wx:if="{{item}}">
+    <view class="d-head">
+      <view class="d-title">{{item.title}}</view>
+      <view class="d-meta">
+        <text class="tag" bindtap="goCat">{{item.cat}}</text>
+        <text class="d-id">#{{item.id}}</text>
+      </view>
+    </view>
+
+    <image wx:if="{{item.image}}" class="d-cover" src="{{item.image}}" mode="widthFix" lazy-load="true" show-menu-by-longpress="true"></image>
+
+    <view class="d-body">
+      <view class="d-label">PROMPT</view>
+
+      <view wx:if="{{loading}}" class="d-skeleton">
+        <view class="d-skeleton__line"></view>
+        <view class="d-skeleton__line"></view>
+        <view class="d-skeleton__line d-skeleton__line--short"></view>
+        <view class="d-skeleton__tip">正在加载正文…</view>
+      </view>
+
+      <view wx:elif="{{error}}" class="d-error">
+        <text class="d-error__msg">{{error}}</text>
+        <view class="btn btn--ghost d-retry" bindtap="fetch" hover-class="btn--hover">重新加载</view>
+      </view>
+
+      <text wx:else class="d-prompt" user-select="{{true}}">{{item.prompt}}</text>
+    </view>
+  </block>
+
+  <view wx:else class="state">
+    <text class="state__title">没有找到这条提示词</text>
+    {{error}}
+  </view>
+
+  <!-- 底部操作条：仅复制 + 收藏，不展示图片与原帖链接 -->
+  <view class="d-bar" wx:if="{{item}}">
+    <view class="d-bar__fav {{faved ? 'd-bar__fav--on' : ''}}" bindtap="toggleFav" hover-class="btn--hover">
+      <text>{{faved ? '★' : '☆'}}</text>
+      <text class="d-bar__favtxt">{{faved ? '已收藏' : '收藏'}}</text>
+    </view>
+    <view class="btn btn--primary d-bar__copy" bindtap="copyPrompt" hover-class="btn--hover">复制提示词</view>
+  </view>
+
+</view>

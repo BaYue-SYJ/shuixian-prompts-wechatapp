@@ -1,0 +1,36 @@
+.f-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  background: linear-gradient(180deg, #E3F4F8 0%, #F7F7F7 100%);
+  padding: 36rpx 32rpx 28rpx;
+}
+.f-head__title {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #111111;
+}
+.f-head__sub {
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  color: #6f8a94;
+}
+.f-head__clear {
+  font-size: 25rpx;
+  color: #8fa6ae;
+  padding: 8rpx 4rpx;
+}
+
+.list {
+  padding: 20rpx 24rpx 40rpx;
+}
+.f-remove {
+  font-size: 24rpx;
+  color: #b6c0c6;
+  padding: 6rpx 10rpx;
+}
+.f-empty__btn {
+  width: 260rpx;
+  height: 76rpx;
+  margin: 40rpx auto 0;
+}
