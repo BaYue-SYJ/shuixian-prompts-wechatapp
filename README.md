@@ -57,6 +57,16 @@ node scripts/mp_integration_test.js            # 集成测试（无需开发者�
 
 > 数据源默认读环境变量 `MP_SRC_DATA`，否则 `../shuixian-unified-0920/data`；目录不存在时测试自动跳过（exit 0）。
 
+## 界面截图
+
+<p>
+  <img src="docs/screenshots/mp-01.png" width="19%" alt="小程序界面 1">
+  <img src="docs/screenshots/mp-02.png" width="19%" alt="小程序界面 2">
+  <img src="docs/screenshots/mp-03.png" width="19%" alt="小程序界面 3">
+  <img src="docs/screenshots/mp-04.png" width="19%" alt="小程序界面 4">
+  <img src="docs/screenshots/mp-05.png" width="19%" alt="小程序界面 5">
+</p>
+
 ## 相关项目
 
 | 项目 | 说明 |
@@ -77,6 +87,7 @@ node scripts/mp_integration_test.js            # 集成测试（无需开发者�
 ## 联系
 
 - 站点：[https://prompt.qqsrc.com/](https://prompt.qqsrc.com/)
+- 小程序：微信内打开 `#小程序://水仙AI/LHxQxRquVzOWT9g`，或搜索「水仙AI」
 - 公众号：**水仙的AI提示词** —— 会经常写一些 AI 工具与提示词相关的东西
 - 微信：**Kas2026** —— 公益免费交流群，不收取任何费用，喜欢技术的可以一起交流
 - 投稿、纠错、建议：欢迎开 [Issue](https://github.com/BaYue-SYJ/shuixian-prompts/issues)
