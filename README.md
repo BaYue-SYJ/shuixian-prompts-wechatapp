@@ -1,8 +1,22 @@
 # 水仙的AI提示词 · 微信小程序（纯文字离线版）
 
+## ▸ 微信小程序已上线：水仙AI
+
+微信内打开 **`#小程序://水仙AI/LHxQxRquVzOWT9g`**，或直接在微信搜索「水仙AI」即可进入。
+
 > 5,262 条中文 AI 绘画提示词，压缩内置进包。不联网、不依赖任何服务器和域名，导入微信开发者工具即可用。
 
 提示词覆盖 Midjourney、Stable Diffusion、Flux、ChatGPT、Gemini，以及即梦、可灵、豆包、海螺、文心一格等主流生图模型。
+
+## 界面截图
+
+<p>
+  <img src="docs/screenshots/mp-01.png" width="19%" alt="小程序界面 1">
+  <img src="docs/screenshots/mp-02.png" width="19%" alt="小程序界面 2">
+  <img src="docs/screenshots/mp-03.png" width="19%" alt="小程序界面 3">
+  <img src="docs/screenshots/mp-04.png" width="19%" alt="小程序界面 4">
+  <img src="docs/screenshots/mp-05.png" width="19%" alt="小程序界面 5">
+</p>
 
 ## 为什么是离线版
 
@@ -56,16 +70,6 @@ node scripts/mp_integration_test.js            # 集成测试（无需开发者�
 ```
 
 > 数据源默认读环境变量 `MP_SRC_DATA`，否则 `../shuixian-unified-0920/data`；目录不存在时测试自动跳过（exit 0）。
-
-## 界面截图
-
-<p>
-  <img src="docs/screenshots/mp-01.png" width="19%" alt="小程序界面 1">
-  <img src="docs/screenshots/mp-02.png" width="19%" alt="小程序界面 2">
-  <img src="docs/screenshots/mp-03.png" width="19%" alt="小程序界面 3">
-  <img src="docs/screenshots/mp-04.png" width="19%" alt="小程序界面 4">
-  <img src="docs/screenshots/mp-05.png" width="19%" alt="小程序界面 5">
-</p>
 
 ## 相关项目
 
