@@ -66,11 +66,11 @@ node scripts/mp_integration_test.js            # 集成测试（无需开发者�
 | [threads-ai-radar](https://github.com/BaYue-SYJ/threads-ai-radar) | Threads 爆款雷达，按互动量排榜 |
 | [zimeiti-workbuddy](https://github.com/BaYue-SYJ/zimeiti-workbuddy) | Creator Buddy：公众号 / 小红书 / 短视频创作工具箱 |
 | [web-html-image-skill](https://github.com/BaYue-SYJ/web-html-image-skill) | web-image：用 HTML/CSS 出图，不依赖生图模型 |
-| [Awesome-shuixian-prompts-archive](https://github.com/BaYue-SYJ/Awesome-shuixian-prompts-archive) | 本项目的历史版本归档 |
+| [Awesome-shuixian-prompts-archive](https://github.com/BaYue-SYJ/Awesome-shuixian-prompts-archive) | 水仙画廊（shuixian-prompts）的历史版本归档 |
 
 ## 许可
 
-代码采用 **MIT 许可证**：可自由使用、修改、分发，详见 [LICENSE](LICENSE)。
+采用**署名使用**协议：可自由学习、fork、二次开发、非商业转载，但请**保留出处并链接回本仓库**；衍生项目需写清来源；商业用途需先联系作者获取授权。详见 [LICENSE](LICENSE)。
 
 仓库内的提示词原文与图片来自公开渠道的整理与收录，**版权归各自原作者**，本项目只做整理、分类与展示。商用请自行确认权利来源。
 
